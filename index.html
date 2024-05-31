@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="test.jpg">
     <title>Document</title>
     <style>
     
@@ -15,9 +16,10 @@
         }
 
         .container {
+            padding-left: 4%;
+            padding-right: 4%;
             background-color: teal;
-            /* width: 400px;
-            height: 800px; */
+            max-width: 100%;
             margin: 0 auto;
             overflow: hidden;
             overflow-y: scroll;
@@ -50,7 +52,8 @@
             position: fixed;
             /* left: -100%; */
             bottom: 0;
-            width: 100%;
+            width: 90%;
+            margin: 0 auto;
             height: 0px;
             visibility: hidden;
             background-color: rgba(245, 245, 245, 0.8);
@@ -66,12 +69,6 @@
             visibility: visible;
         }
 
-        @media screen and (min-width: 320px) and (max-width:767px) {
-            .container {
-                width: 100vw;
-                height: 100vh;
-            }
-        }
     </style>
 </head>
 
