@@ -1,0 +1,21 @@
+{
+    "name": "My App PWA",
+    "short_name": "My App PWA",
+    "description": "Test PWA application",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#fff",
+    "theme_color": "#4CAF50"
+  }

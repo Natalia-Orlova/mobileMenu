@@ -9,7 +9,8 @@
     <meta property="og:image:height" content="240">
     <meta property="og:title" content="DEV/ЗАВОД">
     <meta property="og:description" content="Мы собираем сайты, как конструкторы, из лучших деталей.">
-    <title>DEV/ЗАВОДt</title>
+    <title>DEV/ЗАВОД</title>
+    <link rel="manifest" href="manifest.json">
     <style>
         a {
             text-decoration: none;
@@ -44,15 +45,11 @@
 
         /* Стили для мобильного меню */
         #mobile-menu {
-            /* display: none; */
-            /* Дополнительные стили для вашего меню */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            /* position: absolute; */
             position: fixed;
-            /* left: -100%; */
             bottom: 0;
             width: 90%;
             margin: 0 auto;
@@ -66,7 +63,6 @@
         }
 
         #mobile-menu.opened {
-            /* transform: translateX(100%); */
             height: 70%;
             visibility: visible;
         }
@@ -181,6 +177,19 @@
                 mobileMenu.classList.remove('opened');
             }
             startY = null; // Сброс startY
+        }
+
+
+
+        //загрузка service-worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(registration => {
+                    console.log('Service worker registered:', registration);
+                })
+                .catch(error => {
+                    console.error('Service worker registration failed:', error);
+                });
         }
     </script>
 </body>
